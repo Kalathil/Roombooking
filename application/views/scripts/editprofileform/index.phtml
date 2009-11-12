@@ -1,0 +1,19 @@
+<?php 
+/**
+ * This file displays the edit profile form
+ * 
+ * @category Views
+ * @package  Project1
+ * @author   sreenathk <sreenathk@qburst.com>
+ * @license  http://www.zend.com/  sreenathk
+ * @link     sreenathk
+ */
+$this->form->setAction($this->url());
+echo $this->form;
+?>
+<dl>
+<?php if(1 == $this->entries) {
+	echo "Your Profile has been successfuly edited.";
+} ?>
+</dl>
+<a href="<?php echo $this->url(array ( 'controller' => 'index', 'action'=>'homepage'), 'default', true) ?>">Go to homepage.</a>

@@ -1,0 +1,22 @@
+<?php 
+/**
+ * This file displays the message after the reservation process.
+ * 
+ * @category Views
+ * @package  Project1
+ * @author   sreenathk <sreenathk@qburst.com>
+ * @license  http://www.zend.com/  sreenathk
+ * @link     sreenathk
+ */
+?>
+<dl>
+<?php
+if ($this->entries!='0') {
+ 	echo "Room No : ";echo $this->entries;echo " has been alloted to you for the date : ";echo date("d-m-Y");
+} else {
+   	echo "You have already reserved a room for today!!";
+}
+?>
+</dl>
+<a href="<?php echo $this->url(array ( 'controller' => 'index', 'action'=>'homepage'), 'default', true) ?>">Go to homepage.</a>
+

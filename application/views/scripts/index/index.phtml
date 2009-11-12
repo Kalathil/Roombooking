@@ -1,0 +1,17 @@
+<?php 
+/*
+ * This file displays the Login form
+ * 
+ * @category Views
+ * @package  Project1
+ * @author   sreenathk <sreenathk@qburst.com>
+ * @license  http://www.zend.com/  sreenathk
+ * @link     sreenathk
+ */  
+$this->form->setAction($this->url());
+echo $this->form;
+?>
+<?php if(1 == $this->entries){ 
+		echo "Login Failed.";
+	  }
+?>

@@ -1,0 +1,21 @@
+<?php 
+/**
+ * This file displays the homepage
+ * 
+ * @category Views
+ * @package  Project1
+ * @author   sreenathk <sreenathk@qburst.com>
+ * @license  http://www.zend.com/  sreenathk
+ * @link     sreenathk
+ */
+?>
+<dl>
+    <?php foreach ($this->entries as $entry): ?>
+    <dt><?php echo "Room No: ";echo $entry[intRoomId]; ?></dt>
+    <?php  echo "Room Name  :"; echo $entry[vchRoomname];?>
+    <?php endforeach ?>
+	
+</dl>
+<a href="<?php echo $this->url(array ('controller' => 'reserveroom'), 'default', true) ?>">Reserve room</a>&nbsp&nbsp&nbsp&nbsp<a href="<?php echo $this->url(array('controller' => 'editprofileform'), 'default', true) ?>">Edit your profile</a>
+    
+    

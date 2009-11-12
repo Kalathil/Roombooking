@@ -1,0 +1,21 @@
+<?php 
+/**
+ * This file displays the lists of rooms and links for editprofile and reserve room.
+ * 
+ * @category Views
+ * @package  Project1
+ * @author   sreenathk <sreenathk@qburst.com>
+ * @license  http://www.zend.com/  sreenathk
+ * @link     sreenathk
+ */
+?> 
+<dl>
+<?php foreach ($this->entries as $entry): ?>
+<dt>
+<?php echo "Room No : ";echo $entry[intRoomId]; ?>
+</dt>
+<?php  echo "Room Name  : "; echo $entry[vchRoomname];?>
+<a href="<?php echo $this->url(array( 'controller' => 'onreservation', 'action'=>'index', 'data'=>$entry[intRoomId]), 'default', true) ?>">Reserve room</a>
+<?php endforeach ?>
+</dl>
+
